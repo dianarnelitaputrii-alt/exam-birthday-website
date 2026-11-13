@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5f7" />
+  <title>A Little Surprise for Exam ♡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="music-pill">
+    <span class="music-dot" id="musicDot"></span>
+    <span id="musicStatus">a song for you</span>
+    <button id="musicButton" class="music-button" type="button">♪ Play</button>
+  </div>
+  <audio id="backgroundMusic" loop preload="none">
+  <source src="assets/about-you.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main>
+    <section class="screen hero" id="home">
+      <div class="floating float-one">♡</div>
+      <div class="floating float-two">✿</div>
+      <div class="floating float-three">✧</div>
+      <div class="hero-card">
+        <p class="eyebrow">A LITTLE SURPRISE FOR</p>
+        <div class="bow">୨୧</div>
+        <h1>My favorite<br /><span>Exam</span> ♡</h1>
+        <p class="subtext">I made something special just for you...</p>
+        <button class="primary-button" id="openGiftButton">OPEN YOUR GIFT ♡</button>
+        <p class="signature">WITH LOVE, YOUR PERSON</p>
+      </div>
+      <p class="tiny-note">scroll a little, there's more for you</p>
+    </section>
+
+    <section class="section birthday" id="birthday">
+      <p class="eyebrow">TO THE PERSON I'M ALWAYS ROOTING FOR</p>
+      <h2>Happy Birthday,<br /><span>Exam!</span> 🎂</h2>
+      <p class="section-lead">November 13 · Your day, your year, your little celebration.</p>
+      <div class="cake">🎂</div>
+      <div class="wish-card">
+        <p class="eyebrow">A WISH FOR YOU</p>
+        <p>May this new chapter bring you closer to every dream you've been working for.</p>
+      </div>
+      <div class="sparkle-line">✦　♡　✦　♡　✦</div>
+    </section>
+
+    <section class="section letter-section" id="letter">
+      <p class="eyebrow">SOMETHING FROM MY HEART</p>
+      <h2>A Letter For You 💌</h2>
+      <p class="section-lead">There are things I don't always say out loud.</p>
+      <button class="envelope" id="envelopeButton" type="button" aria-expanded="false">
+        <span class="envelope-icon">✉</span>
+        <span>Tap to open</span>
+        <small>for Exam ♡</small>
+      </button>
+      <article class="letter-paper hidden" id="letterPaper">
+        <p class="letter-greeting">Hi, Exam ♡</p>
+        <p>Happy birthday, Sam. Hari ini aku cuma mau kamu tahu kalau aku bersyukur bisa kenal dan punya kamu di hidupku.</p>
+        <p>Hubungan kita memang nggak selalu berjalan mulus. Kita pernah beda pendapat, berantem, dan melewati hari-hari yang nggak mudah. Aku tahu terkadang aku juga sulit dihadapi. Terima kasih karena selama ini kamu sudah banyak bersabar, tetap berusaha, dan nggak gampang menyerah sama kita.</p>
+        <p>Aku mungkin nggak selalu bisa menunjukkan rasa terima kasihku dengan cara yang paling baik, tapi aku benar-benar menghargai semua usaha dan kesabaranmu. Menjelang dua tahun kita bersama, aku berharap kita bisa terus belajar memahami satu sama lain, tumbuh jadi lebih dewasa, dan memperbaiki hal-hal yang masih kurang.</p>
+        <p>Untuk tahun barumu, aku doakan semoga semua cita-citamu satu per satu tercapai. Semoga jalanmu dimudahkan, rezekimu dilimpahkan, kesehatan dan kebahagiaan selalu menyertaimu, dan kamu dikelilingi orang-orang baik.</p>
+        <p>Tetap jadi orang baik, tapi jangan dongo Sam. Jangan terlalu keras sama diri sendiri, dan jangan lupa kalau kamu juga pantas mendapatkan hal-hal baik.</p>
+        <p>Terima kasih sudah bertahan, sudah berusaha, dan sudah jadi bagian dari cerita hidupku. Aku harap hari-hari ke depan membawa lebih banyak hal baik untukmu.</p>
+        <p class="letter-end">Happy birthday, Exam. I'm always rooting for you. ♡</p>
+        <p class="letter-sign">with love,<br />me ♡</p>
+      </article>
+    </section>
+
+    <section class="section reasons-section" id="reasons">
+      <p class="eyebrow">LITTLE THINGS I APPRECIATE</p>
+      <h2>10 Reasons Why ♡</h2>
+      <p class="section-lead">Tap each card. A little reminder of what makes you, you.</p>
+      <div class="reason-grid" id="reasonGrid"></div>
+      <p class="hint" id="reasonHint">Open all the little notes ♡</p>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <p class="eyebrow">JUST FOR FUN</p>
+      <h2>A Little Quiz ♡</h2>
+      <p class="section-lead">Let's see how well you know our tiny universe.</p>
+      <div class="quiz-card">
+        <p class="quiz-count" id="quizCount">QUESTION 1 OF 3</p>
+        <h3 id="quizQuestion">What are we celebrating today?</h3>
+        <div class="answer-list" id="answerList"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="secondary-button hidden" id="nextQuestion" type="button">NEXT ♡</button>
+      </div>
+    </section>
+
+    <section class="section flowers-section" id="flowers">
+      <p class="eyebrow">A FEW LITTLE WISHES</p>
+      <h2>Flowers For You 🌷</h2>
+      <p class="section-lead">Choose a flower. Each one carries a wish from me.</p>
+      <div class="flower-row">
+        <button class="flower" data-message="Semoga langkahmu selalu dimudahkan, bahkan saat jalannya terasa panjang.">🌷<small>01</small></button>
+        <button class="flower" data-message="Semoga cita-cita yang kamu simpan pelan-pelan berubah jadi nyata.">🌼<small>02</small></button>
+        <button class="flower" data-message="Semoga rezekimu luas, cukup, berkah, dan datang dari arah yang baik.">🌸<small>03</small></button>
+        <button class="flower" data-message="Semoga kamu selalu punya alasan untuk tersenyum dan merasa tenang.">🌻<small>04</small></button>
+        <button class="flower" data-message="Semoga kamu tetap baik hati, berani, bijak, dan tahu kapan harus tegas.">🌹<small>05</small></button>
+      </div>
+      <div class="message-box" id="flowerMessage">Pick a flower to read your little wish ♡</div>
+    </section>
+
+    <section class="section present-section" id="present">
+      <p class="eyebrow">ONE LAST LITTLE THING</p>
+      <h2>A Little Present For You ♡</h2>
+      <p class="section-lead">There's one more thing waiting for you.</p>
+      <button class="gift-box" id="giftBox" type="button" aria-label="Open present">
+        <span>🎁</span>
+        <small>tap to open</small>
+      </button>
+      <div class="final-note hidden" id="finalNote">
+        <div class="big-heart">♡</div>
+        <h3>I'm cheering for you, always.</h3>
+        <p>Whatever this next year brings, I hope you keep growing into the person you want to be. One step at a time, Sam.</p>
+        <p class="final-sign">Happy 18th birthday, Exam! ♡</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>made with love, just for Exam ♡</div>
+      <div class="footer-hearts">♡　♡　♡</div>
+      <a href="#home">back to the beginning ↑</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
