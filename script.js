@@ -7,8 +7,10 @@ $("openGiftButton").addEventListener("click", () => {
 
 // Music is user-started because mobile browsers usually block autoplay.
 // Add your own audio file at assets/about-you.mp3.
-const audio = $("backgroundMusic");
-const musicButton = $("musicButton");
+audio.addEventListener("ended", () => {
+  musicButton.textContent = "♪ Play";
+  $("musicDot").classList.remove("playing");
+});
 musicButton.addEventListener("click", async () => {
   if (audio.paused) {
     try {
